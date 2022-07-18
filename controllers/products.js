@@ -56,7 +56,7 @@ const getAllProducts = async(req,res) =>{
         result = result.select(fieldsList)
     }
     const page = Number(req.query.page) || 1 //passed in by user as a string so we need to turn it into a number
-    const limit = Number(req.query.limit) || 10
+    const limit = Number(req.query.limit)
 
     const skip = (page -1) * limit; //pagination logic, you are skipping the page number minus one times the limit i.e if you want to see page two and the limit is 7 items per page, you will skip (2-1) * 7: 7 items, to see 'page 2'
     result = result.skip(skip).limit(limit)
