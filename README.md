@@ -27,10 +27,16 @@ products can be sorted/filtered by name, price, company and rating
 
 `GET` `https://tolu-store-api.herokuapp.com/api/v1/products?numericFilters=price>40,rating>=4`
 
+`GET` `https://tolu-store-api.herokuapp.com/api/v1/products?fields=name,company`
+
 | parameter   | description |  type       | 
 | ----------- | ----------- | ----------- |             
 | `name=`     | filter on a specific product name      |  string     |             
 | `company=`   | filter on a specific company. available companies: `ikea`, `liddy`,`caressa`, `marcos`        |  string       |
+| `featured=`   | filter on whether item is featured or not. can only be `true` or `false`        |  string       |
+| `sort=`   | sort in a specific order by any of the fields. tip: use '-' for descending order (i.e `sort=-name`)        |  string       |
+| `limit=`   | limit the number of products that are returned        |  integer      |
 | `numericFilters=`    | filter on a specific numerical condition (<, <=, =, > or >=). available numerical fields: `price` , `rating`    |  string       |
+| `fields=`    | control how the products are displayed by selecting specific fields (name, price etc). values seperated with ','    |  string       |
 | `page=`   | page number       |  integer      |
 
