@@ -7,7 +7,7 @@ const jsonProducts = require('./products.json')
 
 const start = async () => {
     try {
-        await connectDB(process.env.MONGO_URI)
+        await connectDB(process.env.MONGODB_URI)
         await Product.deleteMany() //delete all the products there first (optional)
         await Product.create(jsonProducts)
         console.log('success')
