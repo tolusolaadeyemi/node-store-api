@@ -26,11 +26,13 @@ app.use('/api/v1/products', products)
 app.use(notFoundMiddleware)
 app.use(errorMiddleware)
 
+const port = process.env.PORT
+
 const start = async () =>{
   try {
     //connect DB
     await connectDB(process.env.MONGO_URI)
-    app.listen(PORT, console.log(`server is listening on port ${PORT}...`))
+    app.listen(port, console.log(`server is listening on port ${port}...`))
   } catch (error) {
     
   }  
