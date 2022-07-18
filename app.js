@@ -16,7 +16,9 @@ app.use(express.json())
 //routes
 
 app.get('/',(req,res)=>{
-    res.send('<h1>Store API</h1><a href="/api/v1/products">products route</a>')
+  return res.status(200).json({
+    message: 'furniture store API',
+  })
 })
 
 app.use('/api/v1/products', products)
