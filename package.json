@@ -1,14 +1,14 @@
 {
-  "name": "jobs",
+  "name": "store-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "simple store api for product search based on certain fields/queries",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "tolu sola-adeyemi <tolusa@hotmail.com>",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
