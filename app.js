@@ -26,7 +26,7 @@ app.use('/api/v1/products', products)
 app.use(notFoundMiddleware)
 app.use(errorMiddleware)
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT 
 
 const start = async () =>{
   try {
