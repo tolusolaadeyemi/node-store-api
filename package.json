@@ -4,7 +4,8 @@
   "description": "simple store api for product search based on certain fields/queries",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "heroku-postbuild": "npm run build"
   },
   "keywords": [],
   "author": "tolu sola-adeyemi <tolusa@hotmail.com>",
